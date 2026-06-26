@@ -1,0 +1,48 @@
+[project]
+name = "paid-skills"
+version = "0.1.0"
+description = "Open-source runtime for monetizing Claude Skills — load SKILL.md, call Anthropic, meter invocations, hook into Stripe. Deploy to Cloudflare Workers, Fly.io, or anywhere."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "sanjibani", email = "sanjibani@users.noreply.github.com" },
+]
+keywords = [
+    "claude", "anthropic", "skills", "skill-md", "monetization",
+    "stripe", "saas", "agent", "cloudflare-workers", "agent-skills",
+]
+
+dependencies = [
+    "anthropic>=0.40.0",
+    "pydantic>=2.5.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "pyyaml>=6.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+stripe = ["stripe>=7.0.0"]
+cf = ["workers-py>=0.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/sanjibani/paid-skills"
+
+[project.scripts]
+paid-skills = "paid_skills.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/paid_skills"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
