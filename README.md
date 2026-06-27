@@ -289,6 +289,7 @@ MIT — see [LICENSE](LICENSE).
 
 ## See also
 
+- [sanjibani/skill-sandbox](https://github.com/sanjibani/skill-sandbox) — the **security layer** for running any third-party Skill safely (no network by default, wall-time + memory limits, JSONL audit log). Pairs with paid-skills for defense-in-depth: host a Skill in paid-skills, run it inside a skill-sandbox subprocess.
 - [Anthropic — Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 - [Open Agent Skills standard](https://agentskills.io)
 - [Stripe — Connect for marketplaces](https://stripe.com/connect)
