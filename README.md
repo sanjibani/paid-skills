@@ -290,6 +290,7 @@ MIT — see [LICENSE](LICENSE).
 ## See also
 
 - [sanjibani/skill-sandbox](https://github.com/sanjibani/skill-sandbox) — the **security layer** for running any third-party Skill safely (no network by default, wall-time + memory limits, JSONL audit log). Pairs with paid-skills for defense-in-depth: host a Skill in paid-skills, run it inside a skill-sandbox subprocess.
+- [sanjibani/mcp-skills-pack](https://github.com/sanjibani/mcp-skills-pack) — 5 ready-to-use Claude Skills (`mcp-auth-helper`, `mcp-error-decoder`, `mcp-tool-picker`, `mcp-schema-discoverer`, `mcp-rate-limit-handler`) that teach Claude the operational best practices of working with MCP servers. Drop them into `~/.claude/skills/` and the agent stops guessing env-var names, decoding raw error envelopes, hammering rate-limited endpoints.
 - [Anthropic — Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 - [Open Agent Skills standard](https://agentskills.io)
 - [Stripe — Connect for marketplaces](https://stripe.com/connect)
